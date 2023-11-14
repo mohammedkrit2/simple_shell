@@ -1,0 +1,20 @@
+#include "shell.h"
+
+
+/**
+ * free_array - Frees a 2D array of strings.
+ * @arr: The array to be freed.
+ */
+void free_array(char **arr)
+{
+	int i;
+
+	if (!arr)
+		return;
+	for (i = 0; arr[i]; i++)
+	{
+		free (arr[i]);
+		arr[i] = NULL;
+	}
+	free (arr), arr = NULL;
+}
