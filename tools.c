@@ -2,8 +2,8 @@
 
 
 /**
- * free_array - Frees a 2D array of strings.
- * @arr: The array to be freed.
+ * free_array - fun that free a 2D array
+ * @arr: The array
  */
 void free_array(char **arr)
 {
@@ -13,8 +13,8 @@ void free_array(char **arr)
 		return;
 	for (i = 0; arr[i]; i++)
 	{
-		free (arr[i]);
+		free(arr[i]);
 		arr[i] = NULL;
 	}
-	free (arr), arr = NULL;
+	free(arr), arr = NULL;
 }

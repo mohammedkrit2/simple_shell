@@ -1,5 +1,10 @@
 #include "shell.h"
-
+/**
+ * main - basic shell
+ * @argv: argv
+ * @ac: a-r-g
+ * Return: tanid command
+ */
 int main(int ac, char **argv)
 {
 	char *line = NULL;
@@ -7,8 +12,7 @@ int main(int ac, char **argv)
 	int status = 0;
 	(void) ac;
 
-	do
-	{
+	do {
 		line = reader();
 		if (line == NULL)
 		{
@@ -30,6 +34,5 @@ int main(int ac, char **argv)
 		status = _execute(command, argv);
 
 	} while (1);
-	
 }
 

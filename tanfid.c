@@ -1,8 +1,15 @@
 #include "shell.h"
+/**
+ * _execute - tanfid l command
+ * @command: par
+ * @argv: par
+ * Return: tanfid
+ */
 int _execute(char **command, char **argv)
 {
 	pid_t child;
 	int status;
+
 	child = fork();
 
 	if (child == 0)
@@ -14,7 +21,7 @@ int _execute(char **command, char **argv)
 			exit(0);
 		}
 	}
-    else
+	else
 	{
 		waitpid(child, &status, 0);
 		free_array(command);

@@ -1,5 +1,9 @@
 #include "shell.h"
 
+/**
+ * reader - fun that read command line
+ * Return: line that she read
+ */
 char *reader(void)
 {
 	char *line = NULL;
@@ -10,17 +14,13 @@ char *reader(void)
 	{
 		write(STDOUT_FILENO, "$ ", 2);
 	}
-	
 
 	t = getline(&line, &len, stdin);
-	if ( t == -1)
+	if (t == -1)
 	{
 		free(line);
 		return (NULL);
 	}
-
-
-
 
 	return (line);
 }
